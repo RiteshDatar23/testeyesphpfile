@@ -925,9 +925,9 @@ $(document).ready(function(){
  $('#paddress').val( $('#address').val() );
  
 Page 38
- $('#pcity').val( $('#city').val() );
- $('#pstate').val( $('#state').val() );
- $('#ppincode').val( $('#pincode').val() );
+ $('pcity').val( $('city').val() );
+ $('pstate').val( $('state').val() );
+ $('ppincode').val( $('pincode').val() );
  } 
  
  });
@@ -935,14 +935,14 @@ Page 38
 </script>
 <script>
 function checkAvailability() {
-$("#loaderIcon").show();
+$("loaderIcon").show();
 jQuery.ajax({
 url: "check_availability.php",
-data:'roomno='+$("#room").val(),
+data:'roomno='+$("room").val(),
 type: "POST",
 success:function(data){
-$("#room-availability-status").html(data);
-$("#loaderIcon").hide();
+$("room-availability-status").html(data);
+$("loaderIcon").hide();
 },
 error:function (){}
 });
@@ -950,16 +950,16 @@ error:function (){}
 </script>
 <script>
 function checkAvailability() {
-$("#loaderIcon").show();
+$("loaderIcon").show();
 jQuery.ajax({
 url: "check_availability.php",
-data:'emailid='+$("#email").val(),
+data:'emailid='+$("email").val(),
  
 Page 39
 type: "POST",
 success:function(data){
-$("#user-availability-status").html(data);
-$("#loaderIcon").hide();
+$("user-availability-status").html(data);
+$("loaderIcon").hide();
 },
 error:function ()
 {
@@ -971,14 +971,14 @@ alert('error');
 </script>
 <script>
 function checkRegnoAvailability() {
-$("#loaderIcon").show();
+$("loaderIcon").show();
 jQuery.ajax({
 url: "check_availability.php",
-data:'regno='+$("#regno").val(),
+data:'regno='+$("regno").val(),
 type: "POST",
 success:function(data){
 $("#user-reg-availability").html(data);
-$("#loaderIcon").hide();
+$("loaderIcon").hide();
 },
 error:function ()
 {
